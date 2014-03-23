@@ -14,8 +14,7 @@ void setup() {
 void draw() {
   background(255);
   fill(100);
-  text(BString[0]+(frameCount/10 % 2 == 0 ? "_" : ""), 50, 50);
-  elthingy.write("BString[0]");
+  elthingy.write(BString[0]);
   fill(random(360), 100, 100);
   ellipse(random(width), random(height), random(width/2), random(height/2));
   rect(random(width), random(height), random(width/2), random(height/2));
@@ -53,3 +52,4 @@ void keyReleased() {
     }
   }
 }
+

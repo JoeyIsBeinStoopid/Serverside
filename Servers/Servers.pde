@@ -7,14 +7,15 @@ void setup() {
   colorMode(HSB, 360, 100, 100);
   elthingy = new Server(this, 5204);
   noStroke();
+  textSize(10);
   BString[0] = "";
 }
 
 void draw() {
   background(255);
   fill(100);
-  text(BString[0]+(frameCount/10 % 2 == 0 ? "_" : ""), 35, 45);
-  elthingy.write("OBAMA CARES ");
+  text(BString[0]+(frameCount/10 % 2 == 0 ? "_" : ""), 50, 50);
+  elthingy.write("BString[0]");
   fill(random(360), 100, 100);
   ellipse(random(width), random(height), random(width/2), random(height/2));
   rect(random(width), random(height), random(width/2), random(height/2));

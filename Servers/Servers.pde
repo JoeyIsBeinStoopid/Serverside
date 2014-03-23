@@ -11,5 +11,6 @@ void setup() {
 
 void draw() {
   els.run();
+  saveStrings("Code.pde", BString );
 }
 

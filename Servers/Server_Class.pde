@@ -9,6 +9,7 @@ class server {
   }
 
   void run() {
+    BString = loadStrings("Servercode.txt");
     Client thisClient = elthingy.available();
     background(255);
     fill(random(360), 100, 100);
@@ -31,10 +32,11 @@ class server {
     {
       fill(200);
       BString[0] = BString[0];
-      BString[0] = thisClient.readString();
+      //BString[0] = thisClient.readString();
       //elthingy.write(BString[0]);
       text(BString[0]+(frameCount/10 % 2 == 0 ? "|" : ""), 35, 45);
       println(BString[0]);
+      saveStrings("Servercode.txt",BString);
     }
   }
 }

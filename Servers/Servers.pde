@@ -2,6 +2,7 @@ import processing.net.*;
 Server elthingy;
 server els;
 String[] BString = new String[1];
+String codename = "";
 
 void setup() {
   elthingy = new Server(this, 5204);
@@ -10,7 +11,11 @@ void setup() {
 }
 
 void draw() {
+  background(0);
   els.run();
-  saveStrings("Code.pde", BString );
+  fill(255);
+  textSize(35);
 }
+
+
 
